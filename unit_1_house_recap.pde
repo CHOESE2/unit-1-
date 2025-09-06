@@ -31,36 +31,17 @@ boolean day = true;
 void setup() {
   size(800, 600);
 
- 
-
-  fill(#1A7158);
-  rect(0, 570, 2, 8);
-
-
-
-
-
-  //background(201, 235, 255);
-
-
-
   stroke(0);
   fill(68, 165, 63);
-
-
-  //if(x < 800){
-  //  x += 1;
-  //square(x, y, 100);
-  //}
 }
 
 
 void draw() {
 
   background(225, 242, 250);
+
    
   //animation
-
 
   if (day) {
   //sun
@@ -69,7 +50,6 @@ void draw() {
   circle(sunX, sunY, 100);
 
   sunX = sunX + 4;
-
 
 
 
@@ -95,6 +75,7 @@ void draw() {
 
 
   if (!day) {
+
     //moon
     fill(161, 161, 162);
     stroke(71, 72, 72);
@@ -136,7 +117,10 @@ moonX = moonX + 4;
 
   fill(255);
 
-  //background
+
+
+//clouds
+
   fill(255);
   stroke(7, 86, 121);
   circle(100, 100, 100);
@@ -169,6 +153,7 @@ moonX = moonX + 4;
 
 
   // house parts
+
   fill(191, 193, 240);
   strokeWeight(5);
   stroke(118, 122, 209);
@@ -193,7 +178,7 @@ moonX = moonX + 4;
   stroke(0);
   rect(400, 500, 80, 100);
 
-  // Chimney (can't spell)
+  // Chimnney (idk spelling)
   rect(210, 170, 30, 60);
 
 
@@ -224,14 +209,11 @@ moonX = moonX + 4;
   rect(709, 292, 8, 100);
   rect(658, 340, 108, 8);
 
-
-
-
   fill(0);
 }
 
 
-
+//not using 
 void window(int x, int y) {
   pushMatrix();
   translate(x, y);
