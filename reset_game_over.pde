@@ -2,14 +2,21 @@
 
 void reset() {
 
- 
+
   if (Bomb.isPlaying()) {
     Bomb.stop();
   }
-  
-  
-  
-  background(0);
+  if (BgMusic.isPlaying()) {
+    BgMusic.stop();
+  }
+
+  if (!defeat.isPlaying()) {
+    defeat.play();
+  }
+
+
+
+  background(#52b69a);
   textFont(dog);
 
   textSize(60);
@@ -19,22 +26,29 @@ void reset() {
   text("PLAY AGAIN ?", 200, 340);
 
 
-textSize(20);
+  textSize(20);
 
 
   tactile(200, 400, 100, 50);
-  fill(0, 0, 255);
+  fill(255);
   rect(200, 400, 100, 50);
-fill(0);
-text("no..", 215, 433);
+  fill(0);
+  text("no..", 215, 433);
 
   tactile(500, 400, 100, 50);
-  fill(0, 0, 255);
+  fill(255);
   rect(500, 400, 100, 50);
   fill(0);
-  
+
   text("YESS", 514, 433);
+
+  textSize(15);
+  fill(255);
+  text("HIGHEST RED APPLES CAUGHT:" + redpointh, 300, 80);
+  text("HIGHEST GREEN APPLES CAUGHT:" + greenpointh, 300, 120);
 }
+
+
 
 
 
@@ -42,19 +56,19 @@ text("no..", 215, 433);
 void tactile (int x, int y, int w, int h) {
   if (mouseX > x && mouseX < x + w && mouseY > y && mouseY < y + h) {
     strokeWeight(3);
-    stroke(0, 0, 255);
-  } else stroke(255);
+    stroke(255);
+  } else stroke(#34a0a4);
 }
 
 
 
 void resetClicks() {
-//  if (mouseX > 200 && mouseX < 300 && mouseY > 400 && mouseY < 450){
-   
-//}
+  //  if (mouseX > 200 && mouseX < 300 && mouseY > 400 && mouseY < 450){
+
+  //}
 
 
-if(mouseX > 500 && mouseX < 600 && mouseY > 400 && mouseY < 450){
-  MODE -= 2;
-}
+  if (mouseX > 500 && mouseX < 600 && mouseY > 400 && mouseY < 450) {
+    MODE -= 2;
+  }
 }

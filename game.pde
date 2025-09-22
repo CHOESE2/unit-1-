@@ -33,6 +33,10 @@ int bCount = 0;
 
 void game() {
   background(255);
+  
+    if (!BgMusic.isPlaying()) {
+    BgMusic.play();
+  }
 
 
   //bomb
@@ -56,9 +60,29 @@ void game() {
   if (bCount >= 100) {
     MODE += 1;
     bCount = 0;
+    redpoint = 0;
+    greenpoint = 0;
     //pomx = -320;
     //pomy = height/2;
   }
+  
+   //text point
+
+  textSize(20);
+  fill(#c1121f);
+  text("red point:" + redpoint, 100, 100);
+
+  fill(#b5e48c);
+  text("green point:" + greenpoint, 500, 500);
+
+if(redpoint >= redpointh){
+  redpointh = redpoint;
+}
+if(greenpoint>= greenpointh){
+  greenpointh = greenpoint;
+}
+
+
 
 
 
@@ -221,14 +245,6 @@ void game() {
   }
 
 
-  //text point
-
-
-  textSize(20);
-  text("red point:" + redpoint, 100, 100);
-
-  fill(0, 255, 0);
-  text("green point:" + greenpoint, 500, 500);
 
 
 

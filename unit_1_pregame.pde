@@ -12,10 +12,10 @@ final int RESET = 2;
 PFont dog;
 
 //SOUND
-//SoundFil BgMusic;
+SoundFile BgMusic;
 SoundFile Bomb;
 //SoundFile intro;
-//SoundFile defeat;
+SoundFile defeat;
 //SoundFile Cutting;
 
 
@@ -29,6 +29,9 @@ PImage appleCUT;
 
 int redpoint = 0;
 int greenpoint = 0;
+
+int redpointh;
+int greenpointh;
 
 //green apple
 PImage green;
@@ -72,10 +75,10 @@ void setup() {
 
 
 
-//BgMusic = new soundFile(this, "");
+BgMusic = new SoundFile(this, "bit-shift-kevin-macleod-main-version-24901-03-12.mp3");
 Bomb = new SoundFile(this, "choese-made-with-Voicemod.mp3");
 //intro = new soundFile(this, "");
-//defeat = new soundFile(this, "");
+defeat = new SoundFile(this, "8-bit-video-game-lose-sound-version-1-145828.mp3");
 //cutting = new soundFile(this, "");
 
   //Sound.amps(0.7);
